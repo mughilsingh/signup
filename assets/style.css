@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: lightyellow;
+}
+.content{
+    width: 80%;
+    margin: auto;
+}
