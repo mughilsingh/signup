@@ -1,21 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const User = require('../models/userModel');
+const signupController = require('../controllers/signupController');
 
-router.get('/', (req, res) => {
-    res.render('./signup');
-    res.end();
-});
-
-router.post('/', (req, res) => {
-    const user = new User({
-        email: req.body.email,
-        password: req.body.password
-    }); 
-    
-    user.save();
-    res.redirect('/index');
-});
+router.get('/', signupController.renderSignupPage);
+router.post('/', signupController.serverSideEmailValidation);
 
 module.exports = router;
