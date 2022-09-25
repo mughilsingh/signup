@@ -3,16 +3,20 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Signup</title>
 </head>
+<script defer src = "js/client-side-form-validation.js"></script>
 <body>
-    <div class="content">
+    <div class="signup-content">
         <h1>Signup</h1>
         <a href="login">Go to Login Page!</a><br><br>
-        <form action='/signup' method="post">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Submit">
+        
+        <form id="signup-form" action='/signup' method="post">
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <div class="signup-error" id="email-error"></div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <div class="signup-error" id="password-error"></div>
+            <input type="submit" value="Sign Up">
         </form>
     </div>
 </body>
